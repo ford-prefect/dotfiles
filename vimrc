@@ -28,7 +28,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " need the 'cs reset' because Fedora autoloads a cscope db if it exists
 set nocscopeverbose
