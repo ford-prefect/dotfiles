@@ -51,6 +51,8 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/vimproc' " For ghcmod-vim
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Tabular'
+Plugin 'itchyny/vim-haskell-indent'
+Plugin 'bitc/vim-hdevtools'
 " For clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'paredit.vim'
