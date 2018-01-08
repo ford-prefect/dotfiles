@@ -34,7 +34,6 @@ Plugin 'VundleVim/Vundle.vim'
 set nocscopeverbose
 cs kill -1
 
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'steffanc/cscopemaps.vim'
 Plugin 'gtk-vim-syntax'
 Plugin 'honza/vim-snippets.git'
@@ -63,6 +62,9 @@ Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'cespare/vim-toml'
 " For Android
 Plugin 'hsanson/vim-android'
+" Themes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/tomorrow-theme'
 
 " All of your Plugins must be added before the following line
 
