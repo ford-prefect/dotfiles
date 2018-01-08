@@ -45,6 +45,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+" For C++
+Plugin 'rhysd/vim-clang-format'
 " For haskell
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/vimproc' " For ghcmod-vim
@@ -245,11 +247,6 @@ nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
 " Ignore files from .gitignore in ctrl-p
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co -X .gitignore --exclude-standard']
-
-" Enable the powerline status bar if we're not running as gvim
-if !has('gui_running')
-  set laststatus=2
-endif
 
 " needed for neocomplete to not break multiple cursors
 " Called once right before you start selecting multiple cursors
