@@ -60,8 +60,6 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
 " For rust
 Plugin 'cespare/vim-toml'
-" For Android
-Plugin 'hsanson/vim-android'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/tomorrow-theme'
@@ -247,8 +245,6 @@ nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
 " Ignore files from .gitignore in ctrl-p
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co -X .gitignore --exclude-standard']
-
-let g:android_sdk_path = "/home/arun/code/android/sdk"
 
 " Enable the powerline status bar if we're not running as gvim
 if !has('gui_running')
