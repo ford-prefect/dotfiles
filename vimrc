@@ -45,6 +45,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
 " For C++
 Plugin 'rhysd/vim-clang-format'
 " For haskell
