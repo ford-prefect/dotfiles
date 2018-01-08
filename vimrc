@@ -65,7 +65,6 @@ Plugin 'FrigoEU/psc-ide-vim'
 Plugin 'cespare/vim-toml'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/tomorrow-theme'
 
 " All of your Plugins must be added before the following line
 
