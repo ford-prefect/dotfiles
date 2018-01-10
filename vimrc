@@ -265,3 +265,6 @@ function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
   endif
 endfunction
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <BS> :noh<CR>
