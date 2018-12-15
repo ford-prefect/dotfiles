@@ -55,7 +55,7 @@ Plugin 'Shougo/vimproc' " For ghcmod-vim
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'Tabular'
 Plugin 'itchyny/vim-haskell-indent'
-Plugin 'bitc/vim-hdevtools'
+"Plugin 'bitc/vim-hdevtools'
 " For clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'paredit.vim'
@@ -237,7 +237,8 @@ let g:syntastic_mode_map = {
 			\ "passive_filetypes": ["c", "cpp"]
 			\ }
 " drop only ghc-mod, superseded by ghcmod-vim
-let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
+"let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
+let g:syntastic_haskell_checkers = ["hlint"]
 
 " neocompletion settings
 " Use neocomplete.
