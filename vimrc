@@ -63,6 +63,7 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
 " For rust
 Plugin 'cespare/vim-toml'
+Plugin 'rust-lang/rust.vim'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 
@@ -250,6 +251,9 @@ nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
 " Ignore files from .gitignore in ctrl-p
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co -X .gitignore --exclude-standard']
+
+" Auto-format Rust files on save
+let g:rustfmt_autosave = 1
 
 " needed for neocomplete to not break multiple cursors
 " Called once right before you start selecting multiple cursors
