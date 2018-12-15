@@ -46,6 +46,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
+Plugin 'w0rp/ale'
 " For C++
 Plugin 'rhysd/vim-clang-format'
 " For haskell
@@ -192,6 +193,16 @@ fun! ShowFuncName()
   call search("\\%" . lnum . "l" . "\\%" . col . "c")
 endfun
 map f :call ShowFuncName() <CR>
+
+" ale settings
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_sign_column_always = 1
+" too painful at the moment to run on C/C++ projects
+let g:ale_pattern_options = {
+\  '\.c$': {'ale_linters': [], 'ale_fixers': []},
+\  '\.cc$': {'ale_linters': [], 'ale_fixers': []},
+\  '\.cpp$': {'ale_linters': [], 'ale_fixers': []},
+\}
 
 " syntastic settings
 set statusline+=%#warningmsg#
