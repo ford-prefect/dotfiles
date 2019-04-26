@@ -64,6 +64,8 @@ Plugin 'paredit.vim'
 " For purescript
 Plugin 'raichoo/purescript-vim'
 Plugin 'FrigoEU/psc-ide-vim'
+" For typescript
+Plugin 'leafgarland/typescript-vim'
 " For rust
 Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
