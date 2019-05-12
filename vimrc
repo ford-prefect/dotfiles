@@ -49,6 +49,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'w0rp/ale'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 " For C++
 Plugin 'rhysd/vim-clang-format'
 " For haskell
