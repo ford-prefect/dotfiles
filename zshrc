@@ -22,7 +22,7 @@ promptinit
 # get some git in our prompt
 GIT_PROMPT_EXECUTABLE="haskell"
 source ~/code/misc/zsh-git-prompt/zshrc.sh
-PROMPT='%B%m%~%b$(git_super_status) %# '
+PROMPT='%B%m %~%b $(git_super_status) %# '
 
 # get bash-style word boundaries at dir separators
 autoload -U select-word-style
