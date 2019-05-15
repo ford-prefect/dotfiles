@@ -56,7 +56,7 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/vimproc' " For ghcmod-vim
 Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Tabular'
+Plugin 'godlygeek/tabular'
 Plugin 'itchyny/vim-haskell-indent'
 "Plugin 'bitc/vim-hdevtools'
 " For clojure
