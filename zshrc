@@ -34,3 +34,4 @@ export PATH
 export EDITOR=vim
 
 export WORKON_HOME=$HOME/code/virtualenvs
+export GOPATH=$HOME/code/go
