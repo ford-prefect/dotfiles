@@ -70,6 +70,8 @@ Plugin 'leafgarland/typescript-vim'
 " For rust
 Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
+" For meson
+Plugin 'igankevich/mesonic'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 
@@ -244,6 +246,16 @@ let g:syntastic_mode_map = {
 " drop only ghc-mod, superseded by ghcmod-vim
 "let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
 let g:syntastic_haskell_checkers = ["hlint"]
+
+" Add meson as a checker
+autocmd FileType c call ConsiderMesonForLinting()
+autocmd FileType cpp call ConsiderMesonForLinting()
+function ConsiderMesonForLinting()
+    if filereadable('meson.build')
+        let g:syntastic_c_checkers = ['meson']
+        let g:syntastic_cpp_checkers = ['mesonpp']
+    endif
+endfunction
 
 " neocompletion settings
 " Use neocomplete.
