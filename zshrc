@@ -10,19 +10,19 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# get some plugin management
+source ~/code/misc/antigen/antigen.zsh
+# themes
+antigen use oh-my-zsh
+antigen theme robbyrussell
+# now add some plugins
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+# go go go!
+antigen apply
+
 bindkey -e
-
-## powerline shell
-#. /usr/share/powerline/zsh/powerline.zsh
-
-# Theme our prompts a bit
-autoload -Uz promptinit
-promptinit
-
-# get some git in our prompt
-GIT_PROMPT_EXECUTABLE="haskell"
-source ~/code/misc/zsh-git-prompt/zshrc.sh
-PROMPT='%B%F{14}%m %F{15}%~%b $(git_super_status)%# '
 
 # get bash-style word boundaries at dir separators
 autoload -U select-word-style
