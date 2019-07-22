@@ -51,27 +51,27 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " For C++
-Plug 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
-Plug 'eagletmt/neco-ghc'
-Plug 'Shougo/vimproc' " For ghcmod-vim
-Plug 'eagletmt/ghcmod-vim'
-Plug 'godlygeek/tabular'
-Plug 'itchyny/vim-haskell-indent'
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'Shougo/vimproc', { 'do': 'make', 'for': 'haskell' } " For ghcmod-vim
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'godlygeek/tabular', { 'for': 'haskell' }
+Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
 "Plug 'bitc/vim-hdevtools'
 " For clojure
-Plug 'tpope/vim-fireplace'
-Plug 'vim-scripts/paredit.vim'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 " For purescript
-Plug 'raichoo/purescript-vim'
+Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 "Plug 'FrigoEU/psc-ide-vim'
 " For typescript
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " For rust
-Plug 'cespare/vim-toml'
-Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml', { 'for': 'rust' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " For meson
-Plug 'igankevich/mesonic'
+Plug 'igankevich/mesonic', { 'for': ['c', 'cpp' ] }
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
