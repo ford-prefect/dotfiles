@@ -23,61 +23,57 @@ set nocompatible
 
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" set the plugin path and start vim-plug
+call plug#begin('~/.vim/plugged')
 
 " need the 'cs reset' because Fedora autoloads a cscope db if it exists
 set nocscopeverbose
 cs kill -1
 
-Plugin 'steffanc/cscopemaps.vim'
-Plugin 'gtk-vim-syntax'
-Plugin 'honza/vim-snippets.git'
-Plugin 'gobgen'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'w0rp/ale'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
+Plug 'steffanc/cscopemaps.vim'
+Plug 'vim-scripts/gtk-vim-syntax'
+Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/neocomplete.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'w0rp/ale'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 " For C++
-Plugin 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format'
 " For haskell
-Plugin 'eagletmt/neco-ghc'
-Plugin 'Shougo/vimproc' " For ghcmod-vim
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'godlygeek/tabular'
-Plugin 'itchyny/vim-haskell-indent'
-"Plugin 'bitc/vim-hdevtools'
+Plug 'eagletmt/neco-ghc'
+Plug 'Shougo/vimproc' " For ghcmod-vim
+Plug 'eagletmt/ghcmod-vim'
+Plug 'godlygeek/tabular'
+Plug 'itchyny/vim-haskell-indent'
+"Plug 'bitc/vim-hdevtools'
 " For clojure
-Plugin 'tpope/vim-fireplace'
-Plugin 'paredit.vim'
+Plug 'tpope/vim-fireplace'
+Plug 'vim-scripts/paredit.vim'
 " For purescript
-Plugin 'raichoo/purescript-vim'
-Plugin 'FrigoEU/psc-ide-vim'
+Plug 'raichoo/purescript-vim'
+"Plug 'FrigoEU/psc-ide-vim'
 " For typescript
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 " For rust
-Plugin 'cespare/vim-toml'
-Plugin 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
 " For meson
-Plugin 'igankevich/mesonic'
+Plug 'igankevich/mesonic'
 " Themes
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 
-call vundle#end()            " required
+" Initialize plugin system
+call plug#end()
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
