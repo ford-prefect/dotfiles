@@ -33,7 +33,13 @@ cs kill -1
 Plug 'steffanc/cscopemaps.vim'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'vim-syntastic/syntastic'
-Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -253,11 +259,9 @@ function ConsiderMesonForLinting()
     endif
 endfunction
 
-" neocompletion settings
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+" deopletion settings
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
