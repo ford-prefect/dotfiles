@@ -33,13 +33,6 @@ cs kill -1
 Plug 'steffanc/cscopemaps.vim'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'vim-syntastic/syntastic'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -260,12 +253,6 @@ function ConsiderMesonForLinting()
         let g:syntastic_cpp_checkers = ['mesonpp']
     endif
 endfunction
-
-" deopletion settings
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " purescript keymappings from their README
 nm <buffer> <silent> <leader>t :<C-U>call Ptype(PgetKeyword(), v:true)<CR>
