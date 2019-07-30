@@ -51,6 +51,8 @@ Plug 'Shougo/vimproc', { 'do': 'make', 'for': 'haskell' } " For ghcmod-vim
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'godlygeek/tabular', { 'for': 'haskell' }
 Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+" For nix
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
 "Plug 'bitc/vim-hdevtools'
 " For clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
