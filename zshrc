@@ -37,3 +37,6 @@ export WORKON_HOME=$HOME/code/virtualenvs
 export GOPATH=$HOME/code/go
 
 export R_LIBS_USER=$HOME/code/R/x86_64-redhat-linux-gnu-library/3.6
+
+# nix-related things
+source $HOME/.nix-profile/etc/profile.d/nix.sh
