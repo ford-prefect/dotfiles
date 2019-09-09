@@ -53,8 +53,8 @@ Plug 'tpope/vim-surround'
 " For C++
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
-Plug 'godlygeek/tabular', { 'for': 'haskell' }
-Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+Plug 'godlygeek/tabular', { 'for': ['haskell', 'purescript', 'elm'] }
+Plug 'itchyny/vim-haskell-indent', { 'for': ['haskell', 'purescript', 'elm'] }
 " For nix
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 "Plug 'bitc/vim-hdevtools'
@@ -63,6 +63,8 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 " For purescript
 Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
+" For Elm
+Plug 'ElmCast/elm-vim', { 'for': 'elm' }
 "Plug 'FrigoEU/psc-ide-vim'
 " For typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
@@ -254,6 +256,9 @@ endfunction
 " deopletion settings
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" Don't use for elm until https://github.com/ElmCast/elm-oracle/issues/26 is
+" resolved
+call deoplete#custom#option('ignore_sources', { 'elm': 'elm-oracle' })
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
