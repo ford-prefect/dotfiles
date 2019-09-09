@@ -53,9 +53,6 @@ Plug 'tpope/vim-surround'
 " For C++
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-Plug 'Shougo/vimproc', { 'do': 'make', 'for': 'haskell' } " For ghcmod-vim
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'godlygeek/tabular', { 'for': 'haskell' }
 Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
 " For nix
@@ -229,16 +226,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " From Stephen Diehl's setup
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
-
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 let g:haskell_tabular = 1
-
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
@@ -249,9 +238,8 @@ let g:syntastic_mode_map = {
 			\ "mode": "active",
 			\ "passive_filetypes": ["c", "cpp"]
 			\ }
-" drop only ghc-mod, superseded by ghcmod-vim
-"let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
-let g:syntastic_haskell_checkers = ["hlint"]
+" drop all haskell checkers in favour of ale
+let g:syntastic_haskell_checkers = []
 
 " Add meson as a checker
 autocmd FileType c call ConsiderMesonForLinting()
