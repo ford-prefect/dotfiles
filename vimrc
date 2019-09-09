@@ -72,7 +72,7 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'cespare/vim-toml', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " For meson
-Plug 'igankevich/mesonic', { 'for': ['c', 'cpp', 'meson' ] }
+Plug 'igankevich/mesonic'
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
