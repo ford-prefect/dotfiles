@@ -73,6 +73,8 @@ Plug 'cespare/vim-toml', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " For meson
 Plug 'igankevich/mesonic'
+" For android
+Plug 'hsanson/vim-android'
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
@@ -280,6 +282,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co -X .gitignore --e
 
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
+
+" Tell vim-android where the SDK is
+let g:android_sdk_path = '/home/arun/code/android/sdk'
 
 " needed for neocomplete to not break multiple cursors
 " Called once right before you start selecting multiple cursors
