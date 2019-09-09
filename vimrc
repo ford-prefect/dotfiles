@@ -166,6 +166,8 @@ set nobackup
 set incsearch
 "set foldmethod=syntax
 
+set omnifunc=ale#completion#OmniFunc
+
 highlight Folded guibg=black guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
 
