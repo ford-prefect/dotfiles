@@ -46,7 +46,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -166,8 +166,6 @@ set nobackup
 set incsearch
 "set foldmethod=syntax
 
-set omnifunc=ale#completion#OmniFunc
-
 highlight Folded guibg=black guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
 
@@ -210,16 +208,6 @@ fun! ShowFuncName()
 endfun
 map f :call ShowFuncName() <CR>
 
-" ale settings
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_sign_column_always = 1
-" too painful at the moment to run on C/C++ projects
-let g:ale_pattern_options = {
-\  '\.c$': {'ale_linters': [], 'ale_fixers': []},
-\  '\.cc$': {'ale_linters': [], 'ale_fixers': []},
-\  '\.cpp$': {'ale_linters': [], 'ale_fixers': []},
-\}
-
 " syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -244,8 +232,6 @@ let g:syntastic_mode_map = {
 			\ "mode": "active",
 			\ "passive_filetypes": ["c", "cpp"]
 			\ }
-" drop all haskell checkers in favour of ale
-let g:syntastic_haskell_checkers = []
 
 " Add meson as a checker
 autocmd FileType c call ConsiderMesonForLinting()
