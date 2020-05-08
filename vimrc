@@ -242,7 +242,7 @@ endfunction
 
 " deopletion settings
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 " Don't use for elm until https://github.com/ElmCast/elm-oracle/issues/26 is
 " resolved
 call deoplete#custom#option('ignore_sources', { 'elm': 'elm-oracle' })
