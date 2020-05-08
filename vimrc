@@ -53,7 +53,7 @@ Plug 'tpope/vim-surround'
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'purescript', 'elm'] }
-Plug 'itchyny/vim-haskell-indent', { 'for': ['haskell', 'purescript', 'elm'] }
+Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'purescript', 'elm'] }
 " For nix
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 "Plug 'bitc/vim-hdevtools'
