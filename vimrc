@@ -48,7 +48,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " For C++
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
@@ -73,8 +72,6 @@ Plug 'cespare/vim-toml', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " For meson
 Plug 'igankevich/mesonic'
-" For android
-Plug 'hsanson/vim-android'
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
