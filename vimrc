@@ -54,6 +54,7 @@ Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'purescript', 'elm'] }
 Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'purescript', 'elm'] }
+Plug 'vmchale/dhall-vim', { 'for': ['dhall'] }
 " For nix
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 "Plug 'bitc/vim-hdevtools'
