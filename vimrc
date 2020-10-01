@@ -42,6 +42,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 " For C++
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
@@ -178,15 +179,6 @@ autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala            setfiletype vala
 au BufRead,BufNewFile *.vapi            setfiletype vala
-
-" Default indentations
-autocmd BufRead,BufNewFile */gst-*/*.[ch] set et sw=2
-autocmd BufRead,BufNewFile */gstreamer-*/*.[ch] set et sw=2
-autocmd BufRead,BufNewFile */gupnp-*/*.[ch] set et
-autocmd BufRead,BufNewFile */pulseaudio/*.[ch] set et sw=4 tw=128
-autocmd BufRead,BufNewFile */ansible/*.yml set et sw=2
-autocmd BufRead,BufNewFile *.hs set et sw=2 sts=2 si
-autocmd BufRead,BufNewFile *.purs set et sw=2 sts=2 si
 
 " Show current function with 'f'
 fun! ShowFuncName()
