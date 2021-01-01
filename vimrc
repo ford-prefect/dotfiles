@@ -23,6 +23,13 @@ set nocompatible
 
 filetype off                  " required
 
+" Auto-install vim-plug if it isn't already
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " set the plugin path and start vim-plug
 call plug#begin('~/.vim/plugged')
 
