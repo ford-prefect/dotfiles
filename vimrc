@@ -77,6 +77,12 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'igankevich/mesonic'
 " Themes
 Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
+Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 " All of your Plugins must be added before the following line
 
