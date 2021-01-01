@@ -39,4 +39,6 @@ export GOPATH=$HOME/code/go
 export R_LIBS_USER=$HOME/code/R/x86_64-redhat-linux-gnu-library/3.6
 
 # nix-related things
-source $HOME/.nix-profile/etc/profile.d/nix.sh
+if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+  source $HOME/.nix-profile/etc/profile.d/nix.sh
+fi
