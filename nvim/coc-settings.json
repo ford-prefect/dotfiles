@@ -1,0 +1,36 @@
+{
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+        }
+      }
+    },
+
+    "purescript": {
+       "command": "purescript-language-server",
+       "args": ["--stdio"],
+       "filetypes": ["purescript"],
+       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
+     },
+
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
+}
