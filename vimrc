@@ -225,9 +225,10 @@ vmap a- :Tabularize /-><CR>
 " End Stephen Diehl
 
 " Disable C and C++ since include files are a pain
+" Disable Rust in favour of CoC
 let g:syntastic_mode_map = {
 			\ "mode": "active",
-			\ "passive_filetypes": ["c", "cpp"]
+			\ "passive_filetypes": ["c", "cpp", "rust"]
 			\ }
 
 " Add meson as a checker
