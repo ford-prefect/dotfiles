@@ -31,7 +31,7 @@ select-word-style bash
 path+=($HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin)
 export PATH
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export WORKON_HOME=$HOME/code/virtualenvs
 export GOPATH=$HOME/code/go
