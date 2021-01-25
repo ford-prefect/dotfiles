@@ -14,7 +14,7 @@ compinit
 source ~/code/misc/antigen/antigen.zsh
 # themes
 antigen use oh-my-zsh
-antigen theme muse
+antigen theme gianu
 # now add some plugins
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
