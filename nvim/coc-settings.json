@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "python"],
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
