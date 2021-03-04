@@ -90,7 +90,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 call plug#end()
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-pyright']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-prettier', 'coc-pyright']
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
