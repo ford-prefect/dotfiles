@@ -51,6 +51,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'rhysd/git-messenger.vim'
+Plug 'editorconfig/editorconfig-vim'
 " For C++
 Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 " For haskell
