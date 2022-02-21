@@ -42,7 +42,6 @@ Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
@@ -260,8 +259,8 @@ nm <buffer> <silent> <leader>qd :<C-U>call PremoveImportQualifications()<CR>
 nm <buffer> <silent> <leader>qa :<C-U>call PaddImportQualifications()<CR>
 nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
-" Ignore files from .gitignore in ctrl-p
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co -X .gitignore --exclude-standard']
+" Use ctrl-p to start FZF
+nm <C-p> :Files<CR>
 
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
