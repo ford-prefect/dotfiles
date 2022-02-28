@@ -32,12 +32,6 @@
        "args": ["--stdio"],
        "filetypes": ["purescript"],
        "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
-     },
-
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    }
+     }
   }
 }
