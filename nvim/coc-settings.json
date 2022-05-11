@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "python"],
+  "coc.preferences.willSaveHandlerTimeout": 5000,
   "python.formatting.provider": "blackd",
   "languageserver": {
     "clangd": {
@@ -7,6 +8,7 @@
       "rootPatterns": ["compile_flags.txt", "compile_commands.json", "*/compile_commands.json"],
       "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     },
+
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
