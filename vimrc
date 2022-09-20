@@ -260,7 +260,7 @@ nm <buffer> <silent> <leader>qa :<C-U>call PaddImportQualifications()<CR>
 nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
 " Use ctrl-p to start FZF
-nm <C-p> :Files<CR>
+nm <C-p> :GFiles<CR>
 
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
