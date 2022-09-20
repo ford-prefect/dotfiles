@@ -42,3 +42,6 @@ export R_LIBS_USER=$HOME/code/R/x86_64-redhat-linux-gnu-library/3.6
 if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   source $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
+
+# asdf for version management
+. $HOME/.asdf/asdf.sh
