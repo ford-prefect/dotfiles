@@ -34,8 +34,10 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " need the 'cs reset' because Fedora autoloads a cscope db if it exists
-set nocscopeverbose
-cs kill -1
+if has("cscope")
+  set nocscopeverbose
+  cs kill -1
+endif
 
 Plug 'steffanc/cscopemaps.vim'
 Plug 'vim-scripts/gtk-vim-syntax'
