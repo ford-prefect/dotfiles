@@ -93,6 +93,9 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " Initialize plugin system
 call plug#end()
 
+" Our favourite colorscheme
+colorscheme koehler
+
 " CoC extensions
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-pyright', 'coc-rust-analyzer']
 

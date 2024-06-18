@@ -59,7 +59,6 @@ if version >= 500
 endif
 
 let &guicursor = &guicursor . ",a:blinkon0"
-colorscheme koehler
 
 highlight Folded guibg=black guifg=lightblue
 highlight FoldColumn guibg=darkgrey guifg=white
