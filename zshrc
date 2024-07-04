@@ -28,7 +28,7 @@ bindkey -e
 autoload -U select-word-style
 select-word-style bash
 
-path+=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin)
+path+=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin $HOME/.cabal/bin)
 export PATH
 
 export EDITOR=nvim
@@ -45,3 +45,5 @@ fi
 
 # asdf for version management
 . $HOME/.asdf/asdf.sh
+
+[ -f "/home/arun/.ghcup/env" ] && source "/home/arun/.ghcup/env" # ghcup-env
