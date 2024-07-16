@@ -68,3 +68,5 @@ set guioptions-=T
 
 " This should have been the default, what is even
 set mouse=a
+
+colorscheme koehler
