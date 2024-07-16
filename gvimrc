@@ -63,7 +63,7 @@ let &guicursor = &guicursor . ",a:blinkon0"
 highlight Folded guibg=black guifg=lightblue
 highlight FoldColumn guibg=darkgrey guifg=white
 
-set guifont=Office\ Code\ Pro\ 11
+set guifont=Source\ Code\ Pro\ 11
 set guioptions-=T
 
 " This should have been the default, what is even
