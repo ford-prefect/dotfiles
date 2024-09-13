@@ -39,11 +39,9 @@ if has("cscope")
   cs kill -1
 endif
 
-Plug 'steffanc/cscopemaps.vim'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
