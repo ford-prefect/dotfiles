@@ -39,13 +39,15 @@ if has("cscope")
   cs kill -1
 endif
 
+Plug 'nvim-treesitter/nvim-treesitter', { 'run': { -> TSUpdate() } }
+Plug 'neovim/nvim-lspconfig'
+Plug 'kevinhwang91/nvim-bqf'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'vim-syntastic/syntastic'
 Plug 'preservim/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
