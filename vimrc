@@ -43,7 +43,6 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'run': { -> TSUpdate() } }
 Plug 'neovim/nvim-lspconfig'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'vim-scripts/gtk-vim-syntax'
-Plug 'vim-syntastic/syntastic'
 Plug 'preservim/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
@@ -212,17 +211,6 @@ fun! ShowFuncName()
 endfun
 map f :call ShowFuncName() <CR>
 
-" syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " From Stephen Diehl's setup
 
 let g:haskell_tabular = 1
@@ -230,23 +218,6 @@ vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 " End Stephen Diehl
-
-" Disable C and C++ since include files are a pain
-" Disable Rust in favour of CoC
-let g:syntastic_mode_map = {
-			\ "mode": "active",
-			\ "passive_filetypes": ["c", "cpp", "rust"]
-			\ }
-
-" Add meson as a checker
-autocmd FileType c call ConsiderMesonForLinting()
-autocmd FileType cpp call ConsiderMesonForLinting()
-function ConsiderMesonForLinting()
-    if filereadable('meson.build')
-        let g:syntastic_c_checkers = ['meson']
-        let g:syntastic_cpp_checkers = ['mesonpp']
-    endif
-endfunction
 
 " purescript keymappings from their README
 nm <buffer> <silent> <leader>t :<C-U>call Ptype(PgetKeyword(), v:true)<CR>
@@ -266,24 +237,6 @@ nm <C-p> :GFiles<CR>
 
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
-
-" Tell vim-android where the SDK is
-let g:android_sdk_path = '/home/arun/code/android/sdk'
-
-" needed for neocomplete to not break multiple cursors
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <BS> :noh<CR>
