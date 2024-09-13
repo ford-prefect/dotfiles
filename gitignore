@@ -29,3 +29,6 @@ cscope.po.out
 
 # clangd
 .cache
+
+# gdb history
+.gdb_history
