@@ -41,6 +41,9 @@ endif
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'run': { -> TSUpdate() } }
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'preservim/nerdcommenter'

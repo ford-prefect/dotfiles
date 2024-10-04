@@ -34,13 +34,31 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 end
 
+local cmp = require 'cmp'
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+  })
+})
+
 -- The value can have a cmd=, for example, to customise things
 local lsps = {
   clangd = { },
   rust_analyzer = { },
 }
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 for name, config in pairs(lsps) do
   config.on_attach = on_attach
+  config.capabilities = capabilities
   lspconfig[name].setup(config)
 end
