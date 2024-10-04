@@ -50,6 +50,14 @@ cmp.setup({
   })
 })
 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "c", "cpp", "css", "haskell", "markdown", "markdown_inline",
+    "just", "rust", "vim", "vimdoc",
+  },
+  auto_install = true,
+}
+
 -- The value can have a cmd=, for example, to customise things
 local lsps = {
   clangd = { },
