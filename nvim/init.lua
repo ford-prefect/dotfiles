@@ -6,7 +6,7 @@ vim.cmd.source(vimrc)
 vim.lsp.set_log_level("debug")
 local lspconfig = require 'lspconfig'
 
-local on_attach = function(_, bufnr)
+local function on_attach(_, bufnr)
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
