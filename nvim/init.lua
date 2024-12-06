@@ -2,6 +2,14 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+-- Quickfix keybindings
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<Esc>", ":cclose<CR>", { noremap = true, silent = true })
+  end,
+})
+
 -- LSP things
 vim.lsp.set_log_level("debug")
 local lspconfig = require 'lspconfig'
