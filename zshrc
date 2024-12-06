@@ -28,7 +28,7 @@ bindkey -e
 autoload -U select-word-style
 select-word-style bash
 
-path+=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin $HOME/.cabal/bin)
+path+=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin $HOME/.cabal/bin $HOME/local/go/bin)
 export PATH
 
 export EDITOR=nvim
