@@ -61,7 +61,7 @@ cmp.setup({
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "c", "cpp", "css", "haskell", "markdown", "markdown_inline",
-    "just", "rust", "vim", "vimdoc",
+    "just", "haskell", "rust", "vim", "vimdoc",
   },
   auto_install = true,
 }
@@ -69,6 +69,9 @@ require'nvim-treesitter.configs'.setup {
 -- The value can have a cmd=, for example, to customise things
 local lsps = {
   clangd = { },
+  hls = {
+    filetypes = { 'haskell', 'lhaskell', 'cabal' },
+  },
   rust_analyzer = { },
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
