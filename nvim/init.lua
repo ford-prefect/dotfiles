@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- LSP things
-vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("error")
 local lspconfig = require 'lspconfig'
 
 local function on_attach(_, bufnr)
