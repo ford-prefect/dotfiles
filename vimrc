@@ -224,17 +224,6 @@ vmap a- :Tabularize /-><CR>
 " End Stephen Diehl
 
 " purescript keymappings from their README
-nm <buffer> <silent> <leader>t :<C-U>call Ptype(PgetKeyword(), v:true)<CR>
-nm <buffer> <silent> <leader>T :<C-U>call PaddTypeAnnotation(matchstr(getline(line(".")), '^\s*\zs\k\+\ze'))<CR>
-nm <buffer> <silent> <leader>s :<C-U>call PapplySuggestion()<CR>
-nm <buffer> <silent> <leader>a :<C-U>call PaddTypeAnnotation()<CR>
-nm <buffer> <silent> <leader>i :<C-U>call PimportIdentifier(PgetKeyword())<CR>
-nm <buffer> <silent> <leader>r :<C-U>call Pload()<CR>
-nm <buffer> <silent> <leader>p :<C-U>call Ppursuit(PgetKeyword())<CR>
-nm <buffer> <silent> <leader>C :<C-U>PcaseSplit<SPACE>
-nm <buffer> <silent> <leader>qd :<C-U>call PremoveImportQualifications()<CR>
-nm <buffer> <silent> <leader>qa :<C-U>call PaddImportQualifications()<CR>
-nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
 " Use ctrl-p to start FZF
 nm <C-p> :GFiles<CR>
