@@ -39,6 +39,10 @@ if has("cscope")
   cs kill -1
 endif
 
+" Prereq for nvim-telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'natecraddock/telescope-zf-native.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'run': { -> TSUpdate() } }
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -51,8 +55,6 @@ Plug 'github/copilot.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
@@ -224,9 +226,24 @@ vmap a- :Tabularize /-><CR>
 " End Stephen Diehl
 
 " purescript keymappings from their README
+"nm <buffer> <silent> <leader>t :<C-U>call Ptype(PgetKeyword(), v:true)<CR>
+"nm <buffer> <silent> <leader>T :<C-U>call PaddTypeAnnotation(matchstr(getline(line(".")), '^\s*\zs\k\+\ze'))<CR>
+"nm <buffer> <silent> <leader>s :<C-U>call PapplySuggestion()<CR>
+"nm <buffer> <silent> <leader>a :<C-U>call PaddTypeAnnotation()<CR>
+"nm <buffer> <silent> <leader>i :<C-U>call PimportIdentifier(PgetKeyword())<CR>
+"nm <buffer> <silent> <leader>r :<C-U>call Pload()<CR>
+"nm <buffer> <silent> <leader>p :<C-U>call Ppursuit(PgetKeyword())<CR>
+"nm <buffer> <silent> <leader>C :<C-U>PcaseSplit<SPACE>
+"nm <buffer> <silent> <leader>qd :<C-U>call PremoveImportQualifications()<CR>
+"nm <buffer> <silent> <leader>qa :<C-U>call PaddImportQualifications()<CR>
+"nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
-" Use ctrl-p to start FZF
-nm <C-p> :GFiles<CR>
+" nvim-telescope suggested bindings
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
