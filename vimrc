@@ -245,6 +245,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Some LSP bindings
+nnoremap <leader>gr <cmd>Telescope lsp_references<cr>
+nnoremap <leader>gi <cmd>Telescope lsp_implementations<cr>
+
 " Auto-format Rust files on save
 let g:rustfmt_autosave = 1
 
