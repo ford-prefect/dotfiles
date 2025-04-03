@@ -42,6 +42,26 @@ local function on_attach(_, bufnr)
   vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 end
 
+-- LSP hints at the end of the line
+require("lsp-endhints").setup {
+	icons = {
+		type = "⬥ ",
+		parameter = "▵ ",
+		offspec = "܀ ", -- hint kind not defined in official LSP spec
+		unknown = "» ", -- hint kind is nil
+	},
+	label = {
+		truncateAtChars = 20,
+		padding = 1,
+		marginLeft = 0,
+		sameKindSeparator = ", ",
+	},
+	extmark = {
+		priority = 50,
+	},
+	autoEnableHints = true,
+}
+
 local cmp = require 'cmp'
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
