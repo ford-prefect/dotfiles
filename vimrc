@@ -39,6 +39,7 @@ if has("cscope")
   cs kill -1
 endif
 
+Plug 'nvim-tree/nvim-tree.lua'
 " Prereq for nvim-telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }

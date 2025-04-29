@@ -2,6 +2,15 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+-- nvim-tree enabling
+-- nvim-tree replaces netrw
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+-- empty setup using defaults
+require("nvim-tree").setup()
+
 -- Quickfix keybindings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "qf",
