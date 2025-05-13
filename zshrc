@@ -29,6 +29,11 @@ autoload -U select-word-style
 select-word-style bash
 
 path+=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/code/npm/bin $HOME/.cabal/bin $HOME/local/go/bin)
+
+# asdf for version management
+export ASDF_DATA_DIR=/home/arun/.asdf
+path=("$ASDF_DATA_DIR/shims" $path)
+
 export PATH
 
 export EDITOR=nvim
@@ -42,8 +47,5 @@ export R_LIBS_USER=$HOME/code/R/x86_64-redhat-linux-gnu-library/3.6
 if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   source $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
-
-# asdf for version management
-. $HOME/.asdf/asdf.sh
 
 [ -f "/home/arun/.ghcup/env" ] && source "/home/arun/.ghcup/env" # ghcup-env
