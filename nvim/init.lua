@@ -109,6 +109,7 @@ require'nvim-treesitter.configs'.setup {
 -- The value can have a cmd=, for example, to customise things
 local lsps = {
   clangd = { },
+  glsl_analyzer = { },
   hls = {
     filetypes = { 'haskell', 'lhaskell', 'cabal' },
   },

@@ -85,6 +85,8 @@ Plug 'cespare/vim-toml', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " For meson
 Plug 'igankevich/mesonic'
+" For glsl
+Plug 'tikhomirov/vim-glsl'
 " Themes
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
