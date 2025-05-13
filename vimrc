@@ -53,7 +53,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'vim-scripts/gtk-vim-syntax'
 Plug 'preservim/nerdcommenter'
-"Plug 'github/copilot.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
@@ -94,8 +93,9 @@ Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-
-" All of your Plugins must be added before the following line
+" LLMs
+Plug 'huggingface/llm.nvim'
+Plug 'github/copilot.vim'
 
 " Initialize plugin system
 call plug#end()

@@ -19,6 +19,23 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- LLMs
+--local llm = require 'llm'
+--llm.setup({
+--  backend = "ollama",
+--  url = "http://localhost:11434",
+--  model = "codellama:7b-code",
+--  -- Codellama settings
+--  tokens_to_clear = { "<EOT>" },
+--  fim = {
+--    enabled = true,
+--    prefix = "<PRE> ",
+--    middle = " <MID>",
+--    suffix = " <SUF>",
+--  },
+--  context_window = 4096,
+--})
+
 -- LSP things
 vim.lsp.set_log_level("error")
 local lspconfig = require 'lspconfig'
