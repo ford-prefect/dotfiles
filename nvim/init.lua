@@ -71,7 +71,7 @@ end
 -- LSP hints at the end of the line
 require("lsp-endhints").setup {
 	label = {
-		truncateAtChars = 20,
+		truncateAtChars = 40,
 		padding = 1,
 		marginLeft = 0,
 		sameKindSeparator = ", ",
