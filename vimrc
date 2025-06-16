@@ -97,7 +97,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " LLMs
 Plug 'huggingface/llm.nvim'
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
 
 " Initialize plugin system
 call plug#end()
