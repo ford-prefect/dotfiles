@@ -43,9 +43,6 @@ export GOPATH=$HOME/code/go
 
 export R_LIBS_USER=$HOME/code/R/x86_64-redhat-linux-gnu-library/3.6
 
-# nix-related things
-if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
-  source $HOME/.nix-profile/etc/profile.d/nix.sh
-fi
-
 [ -f "/home/arun/.ghcup/env" ] && source "/home/arun/.ghcup/env" # ghcup-env
+
+if [ -e /home/arun/.nix-profile/etc/profile.d/nix.sh ]; then . /home/arun/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
