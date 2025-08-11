@@ -242,6 +242,9 @@ vmap a- :Tabularize /-><CR>
 "nm <buffer> <silent> <leader>qa :<C-U>call PaddImportQualifications()<CR>
 "nm <buffer> <silent> ]d :<C-U>call PgoToDefinition(PgetKeyword())<CR>
 
+" Shortcut for nvim-tree
+nnoremap <leader>tt <cmd>NvimTreeToggle<cr>
+
 " nvim-telescope suggested bindings
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
