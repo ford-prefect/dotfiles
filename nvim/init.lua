@@ -38,7 +38,6 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- LSP things
 vim.lsp.set_log_level("error")
-local lspconfig = require 'lspconfig'
 
 local function on_attach(_, bufnr)
   local function buf_set_option(...)
@@ -120,5 +119,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 for name, config in pairs(lsps) do
   config.on_attach = on_attach
   config.capabilities = capabilities
-  lspconfig[name].setup(config)
+  vim.lsp.config(name, config)
+  vim.lsp.enable(name)
 end
