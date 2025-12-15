@@ -146,9 +146,11 @@ map Q gq
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
+" Also spell-checking, because it's nice
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+  set spell
 endif
 
 " Only do this part when compiled with support for autocommands.
