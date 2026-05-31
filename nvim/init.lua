@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd("FileType", {
 --})
 
 -- LSP things
-vim.lsp.set_log_level("error")
+vim.lsp.log.set_level(vim.log.levels.ERROR)
 
 local function on_attach(_, bufnr)
   local function buf_set_option(...)
