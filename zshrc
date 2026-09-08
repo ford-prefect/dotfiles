@@ -17,8 +17,8 @@ antigen use oh-my-zsh
 antigen theme gianu
 # now add some plugins
 antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting@2fc57d63067c18b1100ecdbf684fa5baf49459d1
+antigen bundle zsh-users/zsh-autosuggestions@85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5
 # go go go!
 antigen apply
 
