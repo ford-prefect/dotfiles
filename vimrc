@@ -44,7 +44,8 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'natecraddock/telescope-zf-native.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'run': { -> TSUpdate() } }
+" nvim-treesitter from master while we're on nvim 0.11
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'run': { -> TSUpdate() } }
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'chrisgrieser/nvim-lsp-endhints'
